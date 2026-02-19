@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jesse's Tic Tac Toe Game</title>
+
+<style>
+    /*Universal styling*/
+    * {
+        box-sizing: border-box;
+    }
+
+    /*General body styling*/
+    body {
+    text-align: center;
+    padding: 26px;
+    font-family: sans-serif;
+    }
+
+    /*h1 styling*/
+    h1 {
+        margin: 0 0 12px;
+    }
+    
+    /*Info link styling*/
+    .information-link {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    /*Turn status text at the top of the board*/
+    #turn {
+        margin: 11px 0 12px;
+        font-size: 15px;
+        border: 2px solid black;
+    }
+
+    /*Styling for board to keep it in the center*/
+    #board {
+        margin: 0 auto;
+        width: 330px;
+        font-size: 0;
+    }
+
+    .square {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        margin: 5px;
+        font-size: 60px;
+        display: inline-block;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    .square:hover {
+        background-color: #ddd;
+    }
+
+    #controller {
+        margin-top: 15px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+</style>
+    </head>
+
+ <body>
+    <!--Main html for tic tac toe game-->
+    <h1>Tic Tac Toe</h1>
+
+    <!--Information link that explains game-->
+    <a class="information-link" href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank" rel="noopener">
+        Click this Wikipedia link to learn about how this game works
+    </a>
+
+    <!--Tells the user who's turn it is-->
+    <div id="turn">X's Turn</div>
+
+    <!--div for whole board-->
+    <div id="board">
+        <!--divs for all 9 squares with two X's and one O hardcoded in-->
+    <script>
+        const NUM_SQUARES = 9;
+for (i=0; i<NUM_SQUARES; i++)
+{
+id = "sq"+i;
+document.write( "<div class='square' id='" + id + "'></div>" );
+}
+    </script>
+    <script>
+        document.getElementById("sq0").innerHTML = "X";
+        document.getElementById("sq1").innerHTML = "O";
+        document.getElementById("sq2").innerHTML = "X";
+    </script>
+    </div>
+
+    <div id="controller">
+        <button type="button">Begin</button>
+    </div>
+ </body>   
+</html>
